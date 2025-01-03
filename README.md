@@ -1,4 +1,5 @@
 # Getting Started
+## Proyecto creado por: Claudia, Marta y Simón
 
 Welcome to your new project.
 
