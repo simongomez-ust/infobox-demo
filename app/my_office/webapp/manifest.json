@@ -1,0 +1,114 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "sap.demo.infobox.myoffice",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.16.1",
+      "toolsId": "caeb5692-f5aa-4ac5-9566-5673c7ed78e5"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/leave/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.131.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "sap.demo.infobox.myoffice.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "sap.demo.infobox.myoffice.view"
+      },
+      "routes": [
+        {
+          "name": "RouteMyOffice",
+          "pattern": ":?query:",
+          "target": [
+            "TargetMyOffice"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetMyOffice": {
+          "id": "MyOffice",
+          "name": "MyOffice"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "sap.demo.infobox.myoffice.view.App",
+      "type": "XML",
+      "id": "App"
+    }
+  }
+}

@@ -14,6 +14,7 @@
     "@cap-js/cds-types": "^0.7.0"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "watch-my_office": "cds watch --open my_office/webapp/index.html?sap-ui-xx-viewCache=false"
   }
 }

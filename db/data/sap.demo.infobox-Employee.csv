@@ -1,1 +1,2 @@
 ID,firstName,lastName,managementUnit,organization,organizationDivision,mangementPosition,legalPosition,admissionDate,workSchedule,createdAt,createdBy,modifiedAt,modifiedBy
+1,John,Doe,Unit A,Org A,Division A,Manager,Legal Position A,2023-01-01,Full-time,2023-01-01T10:00:00Z,Admin,2023-01-02T10:00:00Z,Admin

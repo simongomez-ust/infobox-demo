@@ -1,0 +1,48 @@
+<mvc:View xmlns:launchpad="sap.ushell.ui.launchpad" controllerName="sap.demo.infobox.myoffice.controller.MyOffice"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <GenericTile id="tablegramTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Tablegram"
+		subheader="Information about accurate wages" mode="ContentMode" press="press" url="https://www.sap.com/">
+            <TileContent id="tablegramTileContent">
+                <ImageContent id="tablegramImageContent" src="https://static.vecteezy.com/system/resources/previews/026/867/063/non_2x/pile-of-money-free-png.png" />
+            </TileContent>
+	    </GenericTile>
+        <GenericTile id="assetsTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Fixed Assets"
+		subheader="Fixed assets information" mode="HeaderMode" press="press" url="https://www.sap.com/">
+            <TileContent id="assetsTileContent">
+                <ImageContent id="assetsImageContent" src="https://static.vecteezy.com/system/resources/previews/026/867/063/non_2x/pile-of-money-free-png.png" />
+            </TileContent>
+	    </GenericTile>
+        <GenericTile id="leaveTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Leave Application"
+		subheader="Create a vacation request" mode="HeaderMode" press="press" url="https://www.sap.com/">
+            <TileContent id="leaveTileContent">
+                <ImageContent id="leaveImageContent" src="https://static.vecteezy.com/system/resources/previews/026/867/063/non_2x/pile-of-money-free-png.png" />
+            </TileContent>
+	    </GenericTile>
+        <GenericTile id="applicationsTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="My Applications"
+		subheader="View Leave Applications" mode="HeaderMode" press="press" url="https://www.sap.com/">
+            <TileContent id="applicationsTileContent">
+                <ImageContent id="applicationsImageContent" src="https://static.vecteezy.com/system/resources/previews/026/867/063/non_2x/pile-of-money-free-png.png" />
+            </TileContent>
+	    </GenericTile>
+        <GenericTile id="giftTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Gift Declaration"
+		subheader="Information regarding a gift" mode="HeaderMode" press="press" url="https://www.sap.com/">
+            <TileContent id="giftTileContent">
+                <ImageContent id="giftImageContent" src="https://static.vecteezy.com/system/resources/previews/026/867/063/non_2x/pile-of-money-free-png.png" />
+            </TileContent>
+	    </GenericTile>
+        <GenericTile id="conflictTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Conflict Declaration"
+		subheader="Create a conflict interest declaration" mode="HeaderMode" press="press" url="https://www.sap.com/">
+            <TileContent id="conflictTileContent">
+                <ImageContent id="conflictImageContent" src="https://static.vecteezy.com/system/resources/previews/026/867/063/non_2x/pile-of-money-free-png.png" />
+            </TileContent>
+	    </GenericTile>
+        <GenericTile id="employeeTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout "  backgroundColor="red" header="Jhon Doe"
+		subheader="Marketing" mode="ContentMode" url="https://www.sap.com/" frameType="TwoByOne">
+            <TileContent id="employeeTileContent" footerColor="Good">
+                
+            </TileContent>
+	    </GenericTile>
+    </Page>
+</mvc:View>
