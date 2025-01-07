@@ -1,0 +1,12 @@
+POST http://localhost:4004/odata/v4/leave/Leaves
+Content-Type: application/json
+
+{
+    "employeeId_ID": "1f96fb5e-bece-4a6b-84b0-5f0634c7377b",
+    "startDate": "2023-01-01",
+    "endDate": "2023-01-02",
+    "type": "Personal leave",
+    "status": "Pending"
+}
+###
+GET http://localhost:4004/odata/v4/leave/Leaves
