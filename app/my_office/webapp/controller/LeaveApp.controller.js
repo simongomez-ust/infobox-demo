@@ -2,8 +2,10 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/odata/v4/ODataModel",
     "sap/ui/core/routing/History",
-    "sap/ui/core/UIComponent"
-], (Controller, ODataModel, History, UIComponent) => {
+    "sap/ui/core/UIComponent",
+    "sap/m/MessageBox"
+
+], (Controller, ODataModel, History, UIComponent, MessageBox) => {
     "use strict";
 
 
@@ -34,15 +36,19 @@ sap.ui.define([
             const oDateFormat = sap.ui.core.format.DateFormat.getDateInstance({ pattern: "yyyy-MM-dd" });
             const oContext = oBindList.create({
                 "employeeId_ID": "1f96fb5e-bece-4a6b-84b0-5f0634c7377b",
-                "startDate": oDateFormat.format(startDate),
+               "startDate": oDateFormat.format(startDate),
                 "endDate": oDateFormat.format(endDate),
                 "type": type,
                 "status": "Pending"
-            }, true)
-
-
-
+            }, true);
+            oContext.created().then(function () {
+                MessageBox.success("Leave created successfully");
+            }).catch(function (oError) {
+                MessageBox.error("Error creating leave: " + oError.message);
+            });
         },
+            
+    
 
         onBack: function () {
             this.getRouter().navTo("RouteMyOffice");
