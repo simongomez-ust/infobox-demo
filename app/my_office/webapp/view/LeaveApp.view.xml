@@ -1,0 +1,139 @@
+<mvc:View
+    controllerName="sap.demo.infobox.myoffice.controller.LeaveApp"
+    xmlns:launchpad="sap.ushell.ui.launchpad"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
+    xmlns:core="sap.ui.core"
+>
+    <Page id="page" title="{i18n>title}">
+        <VBox>
+            <HBox>
+                <f:Card class="sapUiMediumMargin" width="500px">
+                    <f:header>
+                        <card:Header
+                            title="Employee Data"
+                            iconSrc="sap-icon://employee" />
+                    </f:header>
+                    <f:content>
+                        <VBox
+                            height="310px"
+                            class="sapUiSmallMargin"
+                            justifyContent="SpaceBetween">
+                            <VBox
+                                justifyContent="SpaceBetween"
+                                alignItems="Center"
+                            >
+                                <HBox alignItems="Center" justifyContent="Center">
+                                    <Label text="Employee" width="150px" />
+                                    <Input id="input-employee-name"
+                                        value="{Employee>firstName} {Employee>lastName}"
+                                        enabled="false" textAlign="Center" width="300px" />
+                                </HBox>
+                                <HBox alignItems="Center" justifyContent="Start">
+                                    <Label text="Management Unit" width="150px" />
+                                    <Input id="mngr-unit"
+                                        value="{Employee>managementUnit}" enabled="false"
+                                        textAlign="Center" width="300px" />
+                                </HBox>
+                                <HBox alignItems="Center" justifyContent="Start">
+                                    <Label text="Organization" width="150px" />
+                                    <Input id="org-unit"
+                                        value="{Employee>organization}" enabled="false"
+                                        textAlign="Center" width="300px" />
+                                </HBox>
+                                <HBox alignItems="Center" justifyContent="Start">
+                                    <Label text=" Organization Division " width="150px" />
+                                    <Input id="org-div-unit"
+                                        value="{Employee>organizationDivision}" enabled="false"
+                                        textAlign="Center" width="300px" />
+                                </HBox>
+                                <HBox alignItems="Center" justifyContent="Start">
+                                    <Label text=" Mangement Position " width="150px" />
+                                    <Input id="mng-pos-unit"
+                                        value="{Employee>mangementPosition}" enabled="false"
+                                        textAlign="Center" width="300px" />
+                                </HBox>
+                                <HBox alignItems="Center" justifyContent="Start">
+                                    <Label text=" Legal Position " width="150px" />
+                                    <Input id="lgl-pos-unit"
+                                        value="{Employee>legalPosition}" enabled="false"
+                                        textAlign="Center" width="300px" />
+                                </HBox>
+                                <HBox alignItems="Center" justifyContent="Start">
+                                    <Label text=" Admission Date " width="150px" />
+                                    <Input id="adm-dat-unit"
+                                        value="{Employee>admissionDate}" enabled="false"
+                                        textAlign="Center" width="300px" />
+                                </HBox>
+                                <HBox alignItems="Center" justifyContent="Start">
+                                    <Label text=" Work Schedule " width="150px" />
+                                    <Input id="wrk-sch-unit"
+                                        value="{Employee>workSchedule}" enabled="false"
+                                        textAlign="Center" width="300px" />
+                                </HBox>
+                            </VBox>
+                        </VBox>
+                    </f:content>
+                </f:Card>
+                <f:Card class="sapUiMediumMargin" width="300px">
+                    <f:header>
+                        <card:Header
+                            title="Leave"
+                            subtitle="Choose the type of period of vacations"
+                            iconSrc="sap-icon://create-leave-request" />
+                    </f:header>
+                    <f:content>
+                        <VBox
+                            height="110px"
+                            class="sapUiSmallMargin">
+                            <Label text="Type of vacation" />
+                            <HBox
+                                justifyContent="SpaceBetween"
+                                alignItems="Center"
+                            >
+                                <ActionSelect id="select">
+                                    <items>
+                                        <core:Item key="anual" text="Anual leave" />
+                                        <core:Item key="medical" text="Medical leave" />
+                                        <core:Item key="personal" text="Personal leave" />
+                                    </items>
+                                </ActionSelect>
+                                <Button id="button-verify" text="Verify" press="onVerify" />
+                            </HBox>
+                            <DateRangeSelection
+                                id="DRS1"
+                                class="DRS1"
+                                value="{
+                                'type': 'sap.ui.model.type.DateInterval',
+                                'formatOptions': {
+                                    'pattern': 'yyyy/MM/dd'
+                                },
+                                'parts': [
+                                    {
+                                        'type': 'sap.ui.model.type.Date',
+                                        'path': '/start'
+                                    },
+                                    {
+                                        'type': 'sap.ui.model.type.Date',
+                                        'path': '/end'
+                                    }
+                                ]
+                            }"
+                                change="handleChange" />
+                        </VBox>
+                    </f:content>
+                </f:Card>
+
+            </HBox>
+            <HBox
+                class="sapUiMediumMargin"
+                justifyContent="SpaceBetween"
+                alignItems="Center">
+                <Button id="button-back" text="Back" press="onBack" />
+                <Button id="button-confirm" text="Confirm" press="onConfirm" />
+            </HBox>
+        </VBox>
+    </Page>
+</mvc:View>

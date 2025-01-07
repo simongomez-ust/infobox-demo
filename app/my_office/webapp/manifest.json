@@ -96,13 +96,24 @@
           "target": [
             "TargetMyOffice"
           ]
+        },
+        {
+          "name": "RouteLeaveApp",
+          "pattern": "leaveApp",
+          "target": [
+            "TargetLeaveApp"
+          ]
         }
       ],
       "targets": {
         "TargetMyOffice": {
           "id": "MyOffice",
           "name": "MyOffice"
-        }
+        },
+				"TargetLeaveApp": {
+					"id": "LeaveApp",
+					"name": "LeaveApp"
+				}
       }
     },
     "rootView": {

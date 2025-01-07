@@ -15,7 +15,7 @@
             </TileContent>
 	    </GenericTile>
         <GenericTile id="leaveTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Leave Application"
-		subheader="Create a vacation request" mode="HeaderMode" press="press" url="https://www.sap.com/">
+		subheader="Create a vacation request" mode="HeaderMode" press="onLeaveTilePress" >
             <TileContent id="leaveTileContent">
                 <ImageContent id="leaveImageContent" src="https://static.vecteezy.com/system/resources/previews/026/867/063/non_2x/pile-of-money-free-png.png" />
             </TileContent>
